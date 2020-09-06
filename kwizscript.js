@@ -1,22 +1,8 @@
-//Trying a timer option form stack overflow: https://stackoverflow.com/questions/31559469/how-to-create-a-simple-javascript-timer.
-//I think it was an up timer so I changed the "+sec' to "-sec". I also have changed the rest that was part of the original if to be "stop". 
-function timer(){
-  var sec = 30;
-  var timer = setInterval(function(){
-      document.getElementById('safeTimerDisplay').innerHTML='00:'-sec;
-      sec--;
-      if (sec < 0) {
-          stop(timer);
-      }
-  }, 1000);
-}
 
-timer();
+//I GOOGLED AND FOUND: //https://www.sitepoint.com/simple-javascript-quiz/ . Ive used this to use as an example and am manipulating it in an attempt to get it to work.
 
 
-
-
-
+//VARIABLES
 //Establishing the variables to store answers to then call on to check if answer is right or wrong.
 //If its wrong then there will need to be a function to deduct 10seconds from the timer
 
@@ -36,16 +22,71 @@ console.log(nameDrummer);
 console.log(freddyName);
 
 
-// //Create a function to create the questions.
+//not sure yet how these work
 
+const quizContainer = document.getElementById('quiz');
+
+const resultsContainer = document.getElementById('results');
+
+const submitButton = document.getElementById('submit');
+
+function buildQuiz(){}
+
+function showResults(){}
+
+
+//these are the questions - not sure yet how to connect to the other code
+const myQuestions = [
+    {
+      question: "How many members did Queen have?",
+      answers: {
+        a: "2",
+        b: "8",
+        c: "4"
+      },
+      correctAnswer: "c"
+    },
+    {
+        question: "Who is Queen's drummer?",
+        answers: {
+          a: "Roger Dean",
+          b: "Roger Rabbit",
+          c: "Roger Taylor"
+        },
+        correctAnswer: "c"
+  },
+  {
+    question: "What is Freddy Mercury's birth name?",
+    answers: {
+      a: "Harold Isa CoolDude",
+      b: "Farsorah Bulsara",
+      c: "Freddy Brown",
+      d: "Freddy Bulsara"
+    },
+    correctAnswer: "d"
+  }
+];
+
+
+
+//FUNCTIONS
+//Trying a timer option form stack overflow: https://stackoverflow.com/questions/31559469/how-to-create-a-simple-javascript-timer.
+//I think it was an up timer so I changed the "+sec' to "-sec". I also have changed the rest that was part of the original if to be "stop". 
+function timer(){
+  var sec = 30;
+  var timer = setInterval(function(){
+      document.getElementById('safeTimerDisplay').innerHTML='00:'-sec;
+      sec--;
+      if (sec < 0) {
+          stop(timer);
+      }
+  }, 1000);
+}
+
+
+// //Create a function to create the questions.
 // If the user gets a question worng the 10 seconds must be taken from the timer. If the timer reaches 0 bedfore the final question is answered then the quiz stops
 //and an alert will say "Your knoweldege of Queen needs a bit of a polish!" 
-
-//Calling functions: 
-reduceTimer1();
-reduceTimer2();
-
-
 //reduce timer function for Q1 Band Members
 function reduceTimer1(bandMembers) {
 
@@ -112,58 +153,9 @@ function reduceTimer1(bandMembers) {
     }
 
 
-//https://www.sitepoint.com/simple-javascript-quiz/
-
-const quizContainer = document.getElementById('quiz');
-
-const resultsContainer = document.getElementById('results');
-
-const submitButton = document.getElementById('submit');
-
-function buildQuiz(){}
-
-function showResults(){}
-
-// display quiz right away
-buildQuiz();
-
-// on submit, show results
-submitButton.addEventListener('click', showResults);
 
 
-const myQuestions = [
-    {
-      question: "How many members did Queen have?",
-      answers: {
-        a: "2",
-        b: "8",
-        c: "4"
-      },
-      correctAnswer: "c"
-    },
-    {
-        question: "Who is Queen's drummer?",
-        answers: {
-          a: "Roger Dean",
-          b: "Roger Rabbit",
-          c: "Roger Taylor"
-        },
-        correctAnswer: "c"
-  },
-  {
-    question: "What is Freddy Mercury's birth name?",
-    answers: {
-      a: "Harold Isa CoolDude",
-      b: "Farsorah Bulsara",
-      c: "Freddy Brown",
-      d: "Freddy Bulsara"
-    },
-    correctAnswer: "d"
-  }
-];
-
-
-//Show the list of questions on the page.
+//Show the list of questions on the page - need a function to build the quiz - the 3 questions and options for answers.
 function buildQuiz(){
     // variable to store the HTML output
     const output = [];
@@ -200,6 +192,25 @@ output.push(
 // finally combine our output list into one string of HTML and put it on the page
 quizContainer.innerHTML = output.join('');
 }
+
+
+// on submit, show results...the results for this has to be the final time - viz how many seconds left
+submitButton.addEventListener('click', showResults);
+
+
+
+//CALLING FUNCTIONS
+// Call the function to create the quiz questions
+buildQuiz(myQuestions);
+
+//call the timer
+timer();
+
+//Calling reduce timer by 10 seconds functions: 
+reduceTimer1();
+reduceTimer2();
+reduceTimer3();
+
 
 
 
