@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Queen Rock Quiz</title>
+    <link rel="stylesheet" href="kwizstyle.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Queen Rock Quiz</h1>
+      </header>
+
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Question Time!</h2>
+        </div>
+
+<!--Having a go at creating a timer-->
+<div id="safeTimer">
+    <h2>Timer</h2>
+    <p id="safeTimerDisplay">00:30</p>
+    </div>
+
+
+
+        <div class="card-body">
+            <!--this is where I need to have the questions......-->
+            <div id="quiz"></div>
+           
+        </div>
+
+        <!--This is the button to take the user to the page they can enter their name against their score-->
+        <div class="card-footer">
+          <!--create button to enter the score with a link to the high scores html page-->
+            <a href="kwizhighscore.html" class="btn btn-primary">Enter your score  <img class="two" src="kwizbuttonsmall.jpg" alt="smallrocklogo"></a>
+      
+        </div>
+      </div>
+    </div>
+
+
+    <script src="kwizscript.js"></script>
+  </body>
+</html>
