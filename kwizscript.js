@@ -3,8 +3,8 @@
 
 
 //VARIABLES
-//Establishing the variables to store answers to then call on to check if answer is right or wrong.
-//If its wrong then there will need to be a function to deduct 10seconds from the timer
+//Establishing the variables to store the correct answer to each question.
+//If its wrong then there will need to be a function to deduct 10seconds from the timer.
 
 var bandMembers = "c";
 
@@ -13,7 +13,7 @@ var nameDrummer = "c";
 var freddyName = "d";
 
 
-// //Console log the answers to check its operation
+//Console log the answers to check its operation
 
 console.log(bandMembers)
 
@@ -70,6 +70,7 @@ const myQuestions = [
 
 
 //FUNCTIONS
+
 //Trying a timer option form stack overflow: https://stackoverflow.com/questions/31559469/how-to-create-a-simple-javascript-timer.
 //I think it was an up timer so I changed the "+sec' to "-sec". I also have changed the rest that was part of the original if to be "stop". 
 function timer(){
@@ -83,77 +84,94 @@ function timer(){
   }, 1000);
 }
 
-
-// //Create a function to create the questions.
-// If the user gets a question worng the 10 seconds must be taken from the timer. If the timer reaches 0 bedfore the final question is answered then the quiz stops
-//and an alert will say "Your knoweldege of Queen needs a bit of a polish!" 
-//reduce timer function for Q1 Band Members
-function reduceTimer1(bandMembers) {
-
-  if (bandMembers !== "c") {
-
-     alert("Wrong! You just lost 10 seconds!");
-
-//this only gives an alert to the user (no information for the program) and logs it - it doesnt provide the result to be available for the code to then continue to include in functions to dreate the password
-      console.log("user got band members wrong");
-    
-//code needs to know what the result was so return provides the feedback to the program
-        return false;
-
-        //need to put function in here to deduct (decrement) timer by 10 seconds
-        function getTime(timer) {
-            --10
-        }
-
-      }
-    }
+//FUNCTION TO CREATE QUIZ QUESTIONS
+//Need to write a function to create the questions.
 
 
-//reduce timer function for Q2 Drummers Name
-    function reduceTimer2(nameDrummer) {
+//FUNCTIONS TO CHECK ANSWERS AND IF CORRECT MOVE TO NEXT QUESTION, IF NOT THEN DEDUCT 10 SECONDS FROM TIMER AND THEN MOVE TO NEXT QUESTION IF TIMER GREATER THAN ZERO
+// If the user gets a question wrong, 10 seconds must be taken from the timer. If the timer reaches 0 before the final question is answered then the quiz stops
 
-      if (nameDrummer !== "c") {
-    
-         alert("Wrong! You just lost 10 seconds!");
-    
-    //this only gives an alert to the user (no information for the program) and logs it - it doesnt provide the result to be available for the code to then continue to include in functions to dreate the password
-          console.log("user got drummer name wrong");
-        
+function answerQ1(bandMembers) {
+  if (bandMembers === "c") {
+    alert("Youre right!");
+    //record to cosole to check it works
+      console.log("user got band members right");
     //code needs to know what the result was so return provides the feedback to the program
-            return false;
+        return true;
+    //then go to question 2 only if timer>0 (still working on how to code that)
     
-            //need to put function in here to deduct (decrement) timer by 10 seconds
-            function getTime(timer) {
-                --10
-            }
-    
-          }
-        }
-
-
-//reduce timer function for Q3 Freddy's Name
-  function reduceTimer3(freddyName) {
-
-  if (freddyName !== "d") {
-
-     alert("Wrong! You just lost 10 seconds!");
-
-//this only gives an alert to the user (no information for the program) and logs it - it doesnt provide the result to be available for the code to then continue to include in functions to dreate the password
-      console.log("user got Freddy's name wrong");
-    
-//code needs to know what the result was so return provides the feedback to the program
+  } 
+  else {
+      alert("Wrong! You just lost 10 seconds!");
+    //code needs to know what the result was so return provides the feedback to the program
         return false;
+     //need to put function in here to deduct (decrement) timer by 10 seconds and then tell it to go to the next question
+     function getTime(timer) {
+      --10
+  }
+    //then go to question 2 only if timer>0 (still working on how to code that)
 
-        //need to put function in here to deduct (decrement) timer by 10 seconds
-        function getTime(timer) {
-            --10
-        }
+}
+}
+    
+  
+function answerQ2(nameDrummer) {
+  if (nameDrummer === "c") {
+    alert("Youre right!");
+    //record to cosole to check it works
+      console.log("user got drummer right");
+    //code needs to know what the result was so return provides the feedback to the program
+        return true;
+    //then go to question 2 only if timer>0 (still working on how to code that)
+    
+  } 
+  else {
+      alert("Wrong! You just lost 10 seconds!");
+      //record to cosole to check it works
+      console.log("user got drummer wrong");
+    //code needs to know what the result was so return provides the feedback to the program
+        return false;
+     //need to put function in here to deduct (decrement) timer by 10 seconds and then tell it to go to the next question
+     function getTime(timer) {
+      --10
+  }
+    //then go to question 3 only if timer>0 (still working on how to code that)
 
-      }
-    }
+}
+}
+    
+
+function answerQ3(freddyName) {
+  if (freddyName === "d") {
+    alert("Youre right!");
+    //record to console to check it works
+      console.log("user got Freddy right");
+    //code needs to know what the result was so return provides the feedback to the program
+        return true;
+    //then stop timer and returns that against variable 'results'
+    
+  } 
+  else {
+      alert("Wrong! You just lost 10 seconds!");
+      //record to cosole to check it works
+      console.log("user got freddy wrong");
+    //code needs to know what the result was so return provides the feedback to the program
+        return false;
+     //need to put function in here to deduct (decrement) timer by 10 seconds and then store the time against 'results'
+     function getTime(timer) {
+      --10
+      //then store the time in 'results'
+  }
+    
+
+}
+}
+ //FUNCTION TO STOP THE QUIZ IF THE TIMER REACHES ZERO
+ //this function needs to keep running in the background???
+ function timesUp(){
 
 
-
+ }   
 
 //Show the list of questions on the page - need a function to build the quiz - the 3 questions and options for answers.
 function buildQuiz(){
