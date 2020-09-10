@@ -56,14 +56,13 @@ const myQuestions = [
         correctAnswer: "c"
   },
   {
-    question: "What is Freddy Mercury's birth name?",
+    question: "What is Freddy Mercury's real surname?",
     answers: {
-      a: "Harold Isa CoolDude",
-      b: "Farsorah Bulsara",
-      c: "Freddy Brown",
-      d: "Freddy Bulsara"
+      a: "CoolDude",
+      b: "Bulsara",
+      c: "Brown",
     },
-    correctAnswer: "d"
+    correctAnswer: "b"
   }
 ];
 
@@ -86,6 +85,210 @@ function timer(){
 
 //FUNCTION TO CREATE QUIZ QUESTIONS
 //Need to write a function to create the questions.
+
+
+// Use event handler to create buttons to create answers?
+//For Question 1 which will appear on html page question1.html
+var submitButton2 = ("2")
+button.addEventListener ("click", function answerQ1(bandMembers) {
+    alert("Youre right!");
+    //record to cosole to check it works
+      console.log("user got band members right");
+    //code needs to know what the result was so return provides the feedback to the program
+        return true;
+    //then go to question 2 only if timer>0 (still working on how to code that)
+    
+    } 
+    )
+answerQ1(bandMembers);
+
+
+var submitButton8 = ("8")
+button.addEventListener ("click", function answerQ1(bandMembers) {
+    alert("Youre wrong!");
+    //record to cosole to check it works
+      console.log("user got band members wrong");
+    //code needs to know what the result was so return provides the feedback to the program
+        return false;
+    //then go to question 2 only if timer>0 (still working on how to code that)
+    //need to put function in here to deduct (decrement) timer by 10 seconds and then tell it to go to the next question
+     //function getTime(timer) {
+     // --10
+     //then go to question 2 only if timer>0 (still working on how to code that)
+  }
+  )
+
+answerQ1(bandMembers);
+
+
+var submitButton4 = ("4")
+button.addEventListener ("click", function answerQ1(bandMembers) {
+    alert("Youre wrong!");
+    //record to cosole to check it works
+      console.log("user got band members wrong");
+    //code needs to know what the result was so return provides the feedback to the program
+        return false;
+    //then go to question 2 only if timer>0 (still working on how to code that)
+    //need to put function in here to deduct (decrement) timer by 10 seconds and then tell it to go to the next question
+     //function getTime(timer) {
+     // --10
+     //then go to question 2 only if timer>0 (still working on how to code that)
+  }
+  )
+
+answerQ1(bandMembers);
+
+
+
+// Use event handler to create buttons to create answers?
+//For Question 2 which will appear on html page question2.html
+
+var submitButton2 = ("Roger Dean")
+button.addEventListener ("click", function answerQ2(nameDrummer) {
+  alert("Youre wrong!");
+  //record to cosole to check it works
+    console.log("user got band members wrong");
+  //code needs to know what the result was so return provides the feedback to the program
+      return false;
+  //then go to question 2 only if timer>0 (still working on how to code that)
+  //need to put function in here to deduct (decrement) timer by 10 seconds and then tell it to go to the next question
+   //function getTime(timer) {
+   // --10
+   //then go to question 2 only if timer>0 (still working on how to code that)
+}
+)
+
+
+answerQ2(nameDrummer);
+
+
+var submitButton8 = ("Roger Rabbit")
+button.addEventListener ("click", function answerQ2(nameDrummer) {
+    alert("Youre wrong!");
+    //record to cosole to check it works
+      console.log("user got band members wrong");
+    //code needs to know what the result was so return provides the feedback to the program
+        return false;
+    //then go to question 2 only if timer>0 (still working on how to code that)
+    //need to put function in here to deduct (decrement) timer by 10 seconds and then tell it to go to the next question
+     //function getTime(timer) {
+     // --10
+     //then go to question 2 only if timer>0 (still working on how to code that)
+  }
+  )
+
+answerQ2(nameDrummer);
+
+
+var submitButton4 = ("Roger Taylor")
+button.addEventListener ("click", function answerQ2(nameDrummer) {
+  alert("Youre right!");
+  //record to cosole to check it works
+    console.log("user got band members right");
+  //code needs to know what the result was so return provides the feedback to the program
+      return true;
+  //then go to question 2 only if timer>0 (still working on how to code that)
+  
+  } 
+  )
+
+answerQ2(nameDrummer);
+
+
+
+// Use event handler to create buttons to create answers?
+//For Question 3 which will appear on html page question3.html
+
+var submitButton2 = ("CoolDude")
+button.addEventListener ("click", function answerQ3(freddyName) {
+  alert("Youre wrong!");
+  //record to cosole to check it works
+    console.log("user got band members wrong");
+  //code needs to know what the result was so return provides the feedback to the program
+      return false;
+  //then go to question 2 only if timer>0 (still working on how to code that)
+  //need to put function in here to deduct (decrement) timer by 10 seconds and then tell it to go to the next question
+   //function getTime(timer) {
+   // --10
+   //then go to question 2 only if timer>0 (still working on how to code that)
+}
+)
+
+answerQ3(freddyName);
+
+
+var submitButton8 = ("Bulsara")
+button.addEventListener ("click", function answerQ3(freddyName) {
+  alert("Youre right!");
+  //record to cosole to check it works
+    console.log("user got band members right");
+  //code needs to know what the result was so return provides the feedback to the program
+      return true;
+  //then go to question 2 only if timer>0 (still working on how to code that)
+  
+  } 
+  )
+
+  answerQ3(freddyName);
+
+
+  var submitButton4 = ("Brown")
+  button.addEventListener ("click", function answerQ3(freddyName) {
+    alert("Youre wrong!");
+    //record to cosole to check it works
+      console.log("user got band members wrong");
+    //code needs to know what the result was so return provides the feedback to the program
+        return false;
+    //then go to question 2 only if timer>0 (still working on how to code that)
+    //need to put function in here to deduct (decrement) timer by 10 seconds and then tell it to go to the next question
+     //function getTime(timer) {
+     // --10
+     //then go to question 2 only if timer>0 (still working on how to code that)
+  }
+  )
+
+answerQ3(freddyName);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //FUNCTIONS TO CHECK ANSWERS AND IF CORRECT MOVE TO NEXT QUESTION, IF NOT THEN DEDUCT 10 SECONDS FROM TIMER AND THEN MOVE TO NEXT QUESTION IF TIMER GREATER THAN ZERO
@@ -113,7 +316,7 @@ function answerQ1(bandMembers) {
 
 }
 }
-    
+answerQ1(bandMembers);
   
 function answerQ2(nameDrummer) {
   if (nameDrummer === "c") {
@@ -139,7 +342,8 @@ function answerQ2(nameDrummer) {
 
 }
 }
-    
+  answerQ2(nameDrummer);
+
 
 function answerQ3(freddyName) {
   if (freddyName === "d") {
@@ -162,7 +366,7 @@ function answerQ3(freddyName) {
       --10
       //then store the time in 'results'
   }
-    
+  answerQ3(freddyName)
 
 }
 }
