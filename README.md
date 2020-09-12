@@ -24,7 +24,17 @@ pseudosummaryofneeds.jpg at: https://github.com/MagsBootCamp/homework04-quiz/blo
 
 THE PROCESS OF ATTEMPTING TO CREATE THE QUIZ
 I dont think I'm doing this the right way but trying to show that I undestand what needs to be done albeit I am struggling to put it all together.
+I have put alot of detail within the Javascript file which I have named kwizscript.js at https://github.com/MagsBootCamp/homework04-quiz/blob/master/kwizscript.js
+
 I decided to Google timers and also quizzes to get some help. I have acknowledged this in the Java Script file.
-Theres quite a few test files "Kwiz" in Git Hub as I thought it best to try various options first.
+
+
+I recognised the need to use document.body.innerHTML to replace the questions - and do this after Q1 and Q2 (I only did 3 questions) had been completed but only if the timer >0
+I am using the website Codecademy https://www.codecademy.com/learn:
+I saw examples reassigning the inner HTML of the body element to something else:
+e.g.    document.body.innerHTML = 'The cat loves the dog.'; replaced previous tect on the webpage.
+But I have simply run out of time.
+
+There is a problme with my JS file that I cant work out 
 
 
