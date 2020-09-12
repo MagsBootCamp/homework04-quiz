@@ -14,6 +14,8 @@
 //I used a timer I found on Stack Overflow:
 //https://stackoverflow.com/questions/20618355/the-simplest-possible-javascript-countdown-timer
 //it was set for 10 minutes so I simply adjusted the varfiveMinutes to be 60 * 1 rather than 60 * 10.
+//The timer starts as soon as the page loads.....I have not written a function that starts the timer on the click of the answer to Q1.
+//I've run out of time for this homework.
 
 function startTimer(duration, display) {
   var timer = duration, minutes, seconds;
