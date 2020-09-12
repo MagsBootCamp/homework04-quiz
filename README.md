@@ -1,5 +1,7 @@
 CODE QUIZ
 
+My Published Quiz can be found at: https://magsbootcamp.github.io/homework04-quiz/
+
 Please note that the extensive notes that show my flow of thought as to what was needed to create and make the quiz run are contained within the Javascript file which I have named kwizscript.js at https://github.com/MagsBootCamp/homework04-quiz/blob/master/kwizscript.js
 So this README is brief.
 I have 3 html files:
